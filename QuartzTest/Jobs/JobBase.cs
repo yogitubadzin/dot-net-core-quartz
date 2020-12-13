@@ -50,7 +50,10 @@ namespace QuartzTest.Jobs
 
         private void JobNameGuard()
         {
-            if (string.IsNullOrWhiteSpace(JobName)) throw new Exception("JobName is not provided");
+            if (string.IsNullOrWhiteSpace(JobName))
+            {
+                throw new Exception("JobName is not provided");
+            }
         }
     }
 }
